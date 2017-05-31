@@ -61,8 +61,12 @@ var savecustom = function()
 	var lnl = '  },'
 	var ln12p1 = ""
 	var ln11v2 = ""
+	
+	
+	var pspecies = string.split('{"species":"')
+	var species = pspecies.split(",")[0]
 
-	if(lines[0].indexOf('(M)') != -1)
+	/* if(lines[0].indexOf('(M)') != -1)
 	{
 		lines[0] = lines[0].substring(0, lines[0].indexOf('(M)') - 1) + 
 		lines[0].substring(lines[0].indexOf('(M)') + 3, lines[0].length);
@@ -162,7 +166,7 @@ var savecustom = function()
 		    else var ln2p2 = "set name"
 		}
 	}
-
+*/
 	
 		var ln5p2 = EVs[0]
 		var ln6p2 = EVs[1]
@@ -177,7 +181,7 @@ var savecustom = function()
 		var ln16p2 = IVs[4]
 		var ln17p2 = IVs[5]
 		
-		
+		/*
 		if (EVs[0] == 0)
 		{
 			var hpev = ""
@@ -251,6 +255,7 @@ var savecustom = function()
 			var spiv = ""
 		}
 		else var spiv = ln10p1.concat(IVs[5], lnbr)
+		*/
 		
 	var res = ln1p1.concat(species)	
 	//var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, hpiv, ativ, deiv, saiv, sdiv, spiv, ln11v2, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl);
