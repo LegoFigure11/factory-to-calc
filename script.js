@@ -64,7 +64,7 @@ var savecustom = function()
 	
 	var item = string.substring(string.indexOf('"item":"')+8, string.indexOf('","ability'));
 	var species = string.substring(string.indexOf('{"species":"')+12, string.indexOf('","'));
-	var nature = string.substring(string.indexOf('"nature":')+9, string.indexOf('","moves'));
+	var nature = string.substring(string.indexOf('"nature":"')+10, string.indexOf('","moves'));
 	var ability = string.substring(string.indexOf('"ability":"')+11, string.indexOf('","evs":'));
 
 	/* if(lines[0].indexOf('(M)') != -1)
@@ -188,31 +188,31 @@ var savecustom = function()
 			var hpev = ""
 		}
 		else var hpev = ln5p1.concat(string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')), lnbr)
-		// At IV
+		// Atk EV
 		if (string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')) == 0)
 		{
 			var atev = ""
 		}
 		else var atev = ln6p1.concat(string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')), lnbr)
-		// Def IV
+		// Def EV
 		if (string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')) == 0)
 		{
 			var deev = ""
 		}
 		else var deev = ln7p1.concat(string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')), lnbr)
-		// SpA IV
+		// SpA EV
 		if (string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')) == 0)
 		{
 			var saev = ""
 		}
 		else var saev = ln8p1.concat(string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')), lnbr)
-		// SpD IV
+		// SpD EV
 		if (string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')) == 0)
 		{
 			var sdev = ""
 		}
 		else var sdev = ln9p1.concat(string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')), lnbr)
-		// Spe IV
+		// Spe EV
 		if (string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')) == 0)
 		{
 			var spev = ""
@@ -220,8 +220,8 @@ var savecustom = function()
 		else var spev = ln10p1.concat(string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), lnbr)
 		
 		var move1 = string.substring(string.indexOf('"moves":[[')+11, string.indexOf('"],[')).concat(lnen, lnmv)
-		var m2p1 = string.substring(string.indexOf('"moves":[[')+10)
-		var move2 = m2p1.substring(string.indexOf(move1) + move1.length + 4, string.indexOf('"],[')).concat(lnen, lnmv)
+		// var m2p1 = string.substring(string.indexOf('"moves":[[')+10)
+		var move2 = string.substring(string.indexOf(move1) + move1.length + 4, string.indexOf('"],[')).concat(lnen, lnmv)
 				
 		/*
 		if (string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')) == 31)
