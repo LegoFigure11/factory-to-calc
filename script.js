@@ -64,7 +64,7 @@ var savecustom = function()
 	
 	
 	var pspecies = string.split('{"species":"')
-	var species = pspecies.split(",")[0]
+	species = pspecies.split(",")[0]
 
 	/* if(lines[0].indexOf('(M)') != -1)
 	{
