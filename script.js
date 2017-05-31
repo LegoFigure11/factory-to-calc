@@ -63,8 +63,8 @@ var savecustom = function()
 	var ln11v2 = ""
 	
 	
-	var pspecies = string.split('{"species":"');
-	species = pspecies.split(",")[0]
+	var species = string.substring(string.indexOf('{"species":"'), string.indexOf('","'));
+	//species = pspecies.split(",")[0]
 
 	/* if(lines[0].indexOf('(M)') != -1)
 	{
