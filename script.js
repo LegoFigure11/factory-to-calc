@@ -219,7 +219,7 @@ var savecustom = function()
 		}
 		else var spev = ln10p1.concat(string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), lnbr)
 		
-		var movesall = string.substring(string.indexOf('"moves":[[')+11, string.lastIndexOf(]])-3)
+		var movesall = string.substring(string.indexOf('"moves":[[')+11, string.lastIndexOf(']]')-3)
 		var move1 = string.substring(string.indexOf('"moves":[[')+11, string.indexOf('"],['))
 		// var m2p1 = string.substring(string.indexOf('"moves":[[')+10)
 		var move2 = string.substring(string.indexOf(move1) + move1.length + 4, string.indexOf('"],[')).concat(lnen, lnmv)
