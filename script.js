@@ -62,9 +62,8 @@ var savecustom = function()
 	var ln12p1 = ""
 	var ln11v2 = ""
 	
-	
-	var species = string.substring(string.indexOf('{"species":"')+12, string.indexOf('","'));
 	var item = string.substring(string.indexOf('{"item":"')+9, string.indexOf('","ability'));
+	var species = string.substring(string.indexOf('{"species":"')+12, string.indexOf('","'));
 	var nature = string.substring(string.indexOf('"nature":')+9, string.indexOf('","moves'));
 	var ability = string.substring(string.indexOf('"ability":"')+11, string.indexOf('","evs":'));
 
