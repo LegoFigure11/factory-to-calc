@@ -217,6 +217,9 @@ var savecustom = function()
 			var spev = ""
 		}
 		else var spev = ln10p1.concat(string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), lnbr)
+		
+		var move1 = string.substring(string.indexOf('"moves":[[')+10, string.indexOf('],[')).concat(lnen, lnmv)
+		var move2 = string.indexOf('"moves":[[')+10 .substring(string.indexOf('],[')+3, string.indexOf('"],[')).concat(lnen, lnmv)
 				
 		/*
 		if (string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')) == 31)
@@ -256,7 +259,7 @@ var savecustom = function()
 		else var spiv = ln10p1.concat(IVs[5], lnbr)
 		*/
 		
-	var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11)	
+	var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1)	
 	//var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, hpiv, ativ, deiv, saiv, sdiv, spiv, ln11v2, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl);
     document.getElementById("Output").innerHTML = res
 
