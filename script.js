@@ -66,6 +66,7 @@ var savecustom = function()
 	var species = string.substring(string.indexOf('{"species":"')+12, string.indexOf('","'));
 	var item = string.substring(string.indexOf('{"item":"')+9, string.indexOf('","ability'));
 	var nature = string.substring(string.indexOf('"nature":')+9, string.indexOf('","moves'));
+	var ability = string.substring(string.indexOf('"ability":"')+11, string.indexOf('","evs":'));
 
 	/* if(lines[0].indexOf('(M)') != -1)
 	{
