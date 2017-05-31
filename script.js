@@ -181,12 +181,44 @@ var savecustom = function()
 		var ln16p2 = IVs[4]
 		var ln17p2 = IVs[5]
 		
-		//HP EV
+		// HP EV
 		if (string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')) == 0)
 		{
 			var hpev = ""
 		}
 		else var hpev = ln5p1.concat(string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')), lnbr)
+		// At IV
+		if (string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')) == 0)
+		{
+			var atev = ""
+		}
+		else var atev = ln5p1.concat(string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')), lnbr)
+		// Def IV
+		if (string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')) == 0)
+		{
+			var deev = ""
+		}
+		else var deev = ln5p1.concat(string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')), lnbr)
+		// SpA IV
+		if (string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')) == 0)
+		{
+			var saev = ""
+		}
+		else var saev = ln5p1.concat(string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')), lnbr)
+		// SpD IV
+		if (string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')) == 0)
+		{
+			var sdev = ""
+		}
+		else var sdev = ln5p1.concat(string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')), lnbr)
+		// Spe IV
+		if (string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')) == 0)
+		{
+			var spev = ""
+		}
+		else var spev = ln5p1.concat(string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), lnbr)
+		
+		
 		/*
 		if (EVs[1] == 0)
 		{
@@ -257,7 +289,7 @@ var savecustom = function()
 		else var spiv = ln10p1.concat(IVs[5], lnbr)
 		*/
 		
-	var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev)	
+	var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11)	
 	//var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, hpiv, ativ, deiv, saiv, sdiv, spiv, ln11v2, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl);
     document.getElementById("Output").innerHTML = res
 
