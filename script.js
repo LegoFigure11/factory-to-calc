@@ -219,7 +219,8 @@ var savecustom = function()
 		else var spev = ln10p1.concat(string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), lnbr)
 		
 		var move1 = string.substring(string.indexOf('"moves":[[')+10, string.indexOf('],[')).concat(lnen, lnmv)
-		var move2 = (string.indexOf('"moves":[[')+10).substring(string.indexOf('],[')+3, string.indexOf('"],[')).concat(lnen, lnmv)
+		var m2p1 = string.substring(string.indexOf('"moves":[[')+10)
+		var move2 = m2p1.substring(string.indexOf('],[')+3, string.indexOf('"],[')).concat(lnen, lnmv)
 				
 		/*
 		if (string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')) == 31)
