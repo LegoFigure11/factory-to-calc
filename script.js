@@ -192,66 +192,33 @@ var savecustom = function()
 		{
 			var atev = ""
 		}
-		else var atev = ln5p1.concat(string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')), lnbr)
+		else var atev = ln6p1.concat(string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')), lnbr)
 		// Def IV
 		if (string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')) == 0)
 		{
 			var deev = ""
 		}
-		else var deev = ln5p1.concat(string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')), lnbr)
+		else var deev = ln7p1.concat(string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')), lnbr)
 		// SpA IV
 		if (string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')) == 0)
 		{
 			var saev = ""
 		}
-		else var saev = ln5p1.concat(string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')), lnbr)
+		else var saev = ln8p1.concat(string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')), lnbr)
 		// SpD IV
 		if (string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')) == 0)
 		{
 			var sdev = ""
 		}
-		else var sdev = ln5p1.concat(string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')), lnbr)
+		else var sdev = ln9p1.concat(string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')), lnbr)
 		// Spe IV
 		if (string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')) == 0)
 		{
 			var spev = ""
 		}
-		else var spev = ln5p1.concat(string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), lnbr)
-		
-		
+		else var spev = ln10p1.concat(string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), lnbr)
+				
 		/*
-		if (EVs[1] == 0)
-		{
-			var atev = ""
-		}
-		else var atev = ln6p1.concat(EVs[1], lnbr)
-		
-		if (EVs[2] == 0)
-		{
-			var deev = ""
-		}
-		else var deev = ln7p1.concat(EVs[2], lnbr)
-		
-		if (EVs[3] == 0)
-		{
-			var saev = ""
-		}
-		else var saev = ln8p1.concat(EVs[3], lnbr)
-		
-		if (EVs[4] == 0)
-		{
-			var sdev = ""
-		}
-		else var sdev = ln9p1.concat(EVs[4], lnbr)
-		
-		if (EVs[5] == 0)
-		{
-			var spev = ""
-		}
-		else var spev = ln10p1.concat(EVs[5], lnbr)
-		
-		
-
 		if (string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')) == 31)
 		{
 			var hpiv = ""
