@@ -2,14 +2,14 @@
 
 var showdownFormes = [["Kyurem-White", "Kyurem-W"],
 ["Kyurem-Black", "Kyurem-B"],
-["Rotom-Wash", "Rotom-W"],
-["Rotom-Heat", "Rotom-H"],
+["rotomwash", "Rotom-W"],
+["rotomheat", "Rotom-H"],
 ["Rotom-Frost", "Rotom-F"],
 ["Rotom-Mow", "Rotom-C"],
 ["Rotom-Fan", "Rotom-S"],
 ["Giratina-Origin", "Giratina-O"],
-["Landorus-Therian", "Landorus-T"],
-["Thundurus-Therian", "Thundurus-T"],
+["landorustherian", "Landorus-T"],
+["thundurustherian", "Thundurus-T"],
 ["Tornadus-Therian", "Tornadus-T"],
 ["Floette-Eternal", "Floette-E"],
 ["Pumpkaboo", "Pumpkaboo-Average"],
@@ -252,8 +252,8 @@ var savecustom = function()
 		}
 		else var spiv = ln10p1.concat(IVs[5], lnbr)
 		
-		
-	var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, hpiv, ativ, deiv, saiv, sdiv, spiv, ln11v2, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl);
+	var res = ln1p1.caoncat(species)	
+	//var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, hpiv, ativ, deiv, saiv, sdiv, spiv, ln11v2, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl);
     document.getElementById("Output").innerHTML = res
 
 
