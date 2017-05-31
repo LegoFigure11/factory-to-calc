@@ -181,7 +181,8 @@ var savecustom = function()
 		var ln16p2 = IVs[4]
 		var ln17p2 = IVs[5]
 		
-		if (string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')) == 31)
+		//HP EV
+		if (string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')) == 0)
 		{
 			var hpev = ""
 		}
