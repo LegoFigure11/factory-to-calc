@@ -126,6 +126,8 @@ var savecustom = function()
 		var move2 = m2p1.substring(m2p1.indexOf(m2p1) + 1, m2p1.indexOf('"],['))
 		var m3p1 = movesall.substring(movesall.indexOf(move2) + move2.length + 4)
 		var move3 = m3p1.substring(m3p1.indexOf(m3p1) + 1, m3p1.indexOf('"],['))
+		var m4p1 = movesall.substring(movesall.indexOf(move3) + move3.length + 4)
+		var move4 = m4p1.substring(m4p1.indexOf(m4p1) + 1, m4p1.indexOf('"]]'))
 				
 		/*
 		if (string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')) == 31)
@@ -165,7 +167,7 @@ var savecustom = function()
 		else var spiv = ln10p1.concat(IVs[5], lnbr)
 		*/
 		
-	var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv)	
+	var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl)	
 	//var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, hpiv, ativ, deiv, saiv, sdiv, spiv, ln11v2, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl);
     document.getElementById("Output").innerHTML = res
 
