@@ -132,27 +132,49 @@ var savecustom = function()
 	
 	if(spev.length > 0)
 	{
-		var spc = "\n"
-	}
-	else {
-		var sdc = ""
-	}
+		spc = "\n";
+		sdc = ", \n";
+		sac = ", \n";
+		dec = ", \n";
+		atc = ", \n";
+		hpc = ", \n"
+	};
 	
 	if(sdev.length > 0)
 	{
-		var sdc = "\n"
-	}
-	else {
-		var sac = ""
-	}
+		sdc = "\n";
+		sac = ", \n";
+		dec = ", \n";
+		atc = ", \n";
+		hpc = ", \n"
+	};
 	
 	if(saev.length > 0)
 	{
-		var sac = "\n"
-	}
-	else{
-		var dec = ""
-	}
+		sac = "\n";
+		dec = ", \n";
+		atc = ", \n";
+		hpc = ", \n"
+	};
+	
+	if(deev.length > 0)
+	{
+		dec = "\n";
+		atc = ", \n";
+		hpc = ", \n"
+	};
+	
+	if(atev.length > 0)
+	{
+		atc = "\n";
+		hpc = ", \n"
+	};
+	
+	if(hpev.length > 0)
+	{
+		hpc = "\n"
+	};
+		
 	
 	
 	var movesall = string.substring(string.indexOf('"moves":[[') + 11, string.lastIndexOf(']]'))
