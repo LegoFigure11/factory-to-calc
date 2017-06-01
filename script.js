@@ -60,37 +60,71 @@ var savecustom = function()
 	{
 		var hpev = ""
 	}
-	else var hpev = ln5p1.concat(evbr, string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')), evbr, evln, lnbr)
+	else var hpev = ln5p1.concat(evbr, string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')), evbr)
 	// Atk EV
 	if (string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')) == 0)
 	{
 		var atev = ""
 	}
-	else var atev = ln6p1.concat(evbr, string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')), evbr, evln, lnbr)
+	else var atev = ln6p1.concat(evbr, string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')), evbr)
 	// Def EV
 	if (string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')) == 0)
 	{
 		var deev = ""
 	}
-	else var deev = ln7p1.concat(evbr, string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')), evbr, evln, lnbr)
+	else var deev = ln7p1.concat(evbr, string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')), evbr)
 	// SpA EV
 	if (string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')) == 0)
 	{
 		var saev = ""
 	}
-	else var saev = ln8p1.concat(evbr, string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')), evbr, evln, lnbr)
+	else var saev = ln8p1.concat(evbr, string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')), evbr)
 	// SpD EV
 	if (string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')) == 0)
 	{
 		var sdev = ""
 	}
-	else var sdev = ln9p1.concat(evbr, string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')), evbr, evln, lnbr)
+	else var sdev = ln9p1.concat(evbr, string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')), evbr)
 	// Spe EV
 	if (string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')) == 0)
 	{
 		var spev = ""
 	}
-	else var spev = ln10p1.concat(evbr, string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), evbr, evln, lnbr)
+	else var spev = ln10p1.concat(evbr, string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), evbr)
+	
+	if(hpev.length > 0)
+	{
+		var hpc = ", \n"
+	}
+	else var hpc = ""
+	if(atev.length > 0)
+	{
+		var atc = ", \n"
+	}
+	else var atc = ""
+	if(deev.length > 0)
+	{
+		var dec = ", \n"
+	}
+	else var dec = ""
+	if(saev.length > 0)
+	{
+		var sac = ", \n"
+	}
+	else var sac = ""
+	if(sdev.length > 0)
+	{
+		var sdc = ", \n"
+	}
+	else var sdc = ""
+	if(spev.length > 0)
+	{
+		var spc = ", \n"
+	}
+	else var spc = ""
+	
+	
+	
 	
 	var movesall = string.substring(string.indexOf('"moves":[[') + 11, string.lastIndexOf(']]'))
 	var move1 = string.substring(string.indexOf('"moves":[[') + 11, string.indexOf('"],['))
@@ -100,7 +134,7 @@ var savecustom = function()
 	var move3 = m3p1.substring(m3p1.indexOf(m3p1) + 1, m3p1.indexOf('"],['))
 	var move4 = string.substring(string.lastIndexOf('"],["') + 5, string.lastIndexOf('"]]'))
 	
-	var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl)	
+	var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, hpc, atev, atc, deev, dec, saev, sac, sdev, sdc, spev, spc, ln11, ln12p1, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl)	
 	//var res = ln1p1.concat(species, ln1p2, ln2p1, ln2p2, ln2p3, ln3, ln4, hpev, atev, deev, saev, sdev, spev, ln11, ln12p1, hpiv, ativ, deiv, saiv, sdiv, spiv, ln11v2, ln19p1, nature, lnen, ln20p1, ability, lnen, ln21p1, item, lnen, ln22, lnmv, move1, lnen, lnmv, move2, lnen, lnmv, move3, lnen, lnmv, move4, lnenl, ln3l, ln2l, lnl);
     document.getElementById("Output").innerHTML = res
 
