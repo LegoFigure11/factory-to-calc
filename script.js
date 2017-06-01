@@ -132,7 +132,7 @@ var savecustom = function()
 	
 	if(spev.length > 0)
 	{
-		var spc = ""
+		var spc = "\n"
 	}
 	else {
 		var sdc = ""
