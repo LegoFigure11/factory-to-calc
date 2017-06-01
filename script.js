@@ -132,26 +132,26 @@ var savecustom = function()
 	
 	if(spev.length > 0)
 	{
-		spc = ""
+		var spc = ""
 	}
 	else {
-		sdc = ""
+		var sdc = ""
 	}
 	
 	if(sdev.length > 0)
 	{
-		sdc = ", \n"
+		var sdc = ", \n"
 	}
 	else {
-		sac = ""
+		var sac = ""
 	}
 	
 	if(saev.length > 0)
 	{
-		sac = ", \n"
+		var sac = ", \n"
 	}
 	else{
-		dec = ""
+		var dec = ""
 	}
 	
 	
