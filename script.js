@@ -126,35 +126,6 @@ var savecustom = function()
 	
 	
 	
-	
-	
-	
-	
-	if(spev.length > 0)
-	{
-		spc = ""
-	}
-	else {
-		sdc = ""
-	}
-	
-	if(sdev.length > 0)
-	{
-		sdc = ", \n"
-	}
-	else {
-		sac = ""
-	}
-	
-	if(saev.length > 0)
-	{
-		sac = ", \n"
-	}
-	else{
-		dec = ""
-	}
-	
-	
 	var movesall = string.substring(string.indexOf('"moves":[[') + 11, string.lastIndexOf(']]'))
 	var move1 = string.substring(string.indexOf('"moves":[[') + 11, string.indexOf('"],['))
 	var m2p1 = movesall.substring(movesall.indexOf(move1) + move1.length + 4)
