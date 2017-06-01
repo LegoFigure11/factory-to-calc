@@ -124,7 +124,7 @@ var savecustom = function()
 		var move1 = string.substring(string.indexOf('"moves":[[') + 11, string.indexOf('"],['))
 		// var m2p1 = string.substring(string.indexOf('"moves":[[')+10)
 		var m2p1 = movesall.substring(movesall.indexOf(move1) + move1.length + 4)
-		var move2 = m2p1.substring(string.indexOf(m2p1) + 1, m2p1.indexOf('"],['))
+		var move2 = m2p1.substring(m2p1.indexOf(m2p1) + 1, m2p1.indexOf('"],['))
 				
 		/*
 		if (string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')) == 31)
