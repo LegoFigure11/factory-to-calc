@@ -1,23 +1,10 @@
 // 90% of this code is shamelessly stolen from Jake White's VGC calc, so huge shoutouts to him!
 
-var showdownFormes = [["Kyurem-White", "Kyurem-W"],
-["Kyurem-Black", "Kyurem-B"],
+var showdownFormes = [
 ["rotomwash", "Rotom-W"],
 ["rotomheat", "Rotom-H"],
-["Rotom-Frost", "Rotom-F"],
-["Rotom-Mow", "Rotom-C"],
-["Rotom-Fan", "Rotom-S"],
-["Giratina-Origin", "Giratina-O"],
 ["landorustherian", "Landorus-T"],
-["thundurustherian", "Thundurus-T"],
-["Tornadus-Therian", "Tornadus-T"],
-["Floette-Eternal", "Floette-E"],
-["Pumpkaboo", "Pumpkaboo-Average"],
-["Gourgeist", "Gourgeist-Average"],
-["Wormadan-Sandy", "Wormadan-G"],
-["Wormadan-Trash", "Wormadan-S"],
-["Groudon-Primal", "Groudon"],
-["Kyogre-Primal", "Kyogre"]];
+["thundurustherian", "Thundurus-T"]];
 
 var savecustom = function()
 {
@@ -136,7 +123,7 @@ var savecustom = function()
 		var movesall = string.substring(string.indexOf('"moves":[[')+11, string.lastIndexOf(']]'))
 		var move1 = string.substring(string.indexOf('"moves":[[')+11, string.indexOf('"],['))
 		// var m2p1 = string.substring(string.indexOf('"moves":[[')+10)
-		var m2p1 = movesall.substring(movesall.indexOf(move1) + move1.length + 4)
+		var m2p1 = movesall.substring(movesall.indexOf(move1) + move1.length + 4 + move1.length + 4)
 		var move2 = string.substring(string.indexOf(move1) + move1.length + 4, string.indexOf('"],['))
 				
 		/*
