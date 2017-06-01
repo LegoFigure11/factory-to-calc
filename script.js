@@ -140,7 +140,7 @@ var savecustom = function()
 	
 	if(sdev.length > 0)
 	{
-		var sdc = ", \n"
+		var sdc = "\n"
 	}
 	else {
 		var sac = ""
@@ -148,7 +148,7 @@ var savecustom = function()
 	
 	if(saev.length > 0)
 	{
-		var sac = ", \n"
+		var sac = "\n"
 	}
 	else{
 		var dec = ""
