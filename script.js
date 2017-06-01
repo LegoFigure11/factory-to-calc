@@ -48,6 +48,7 @@ var savecustom = function()
 	var lnl = '  },'
 	var ln12p1 = ""
 	var ln11v2 = ""
+	var evln = ','
 	
 	var item = string.substring(string.indexOf('"item":"')+8, string.indexOf('","ability'));
 	var species = string.substring(string.indexOf('{"species":"')+12, string.indexOf('","'));
@@ -88,37 +89,37 @@ var savecustom = function()
 		{
 			var hpev = ""
 		}
-		else var hpev = ln5p1.concat(string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')), lnbr)
+		else var hpev = ln5p1.concat(string.substring(string.indexOf('"hp":')+5, string.indexOf(',"atk"')), evln, lnbr)
 		// Atk EV
 		if (string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')) == 0)
 		{
 			var atev = ""
 		}
-		else var atev = ln6p1.concat(string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')), lnbr)
+		else var atev = ln6p1.concat(string.substring(string.indexOf('"atk":')+6, string.indexOf(',"def"')), evln, lnbr)
 		// Def EV
 		if (string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')) == 0)
 		{
 			var deev = ""
 		}
-		else var deev = ln7p1.concat(string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')), lnbr)
+		else var deev = ln7p1.concat(string.substring(string.indexOf('"def":')+6, string.indexOf(',"spa"')), evln, lnbr)
 		// SpA EV
 		if (string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')) == 0)
 		{
 			var saev = ""
 		}
-		else var saev = ln8p1.concat(string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')), lnbr)
+		else var saev = ln8p1.concat(string.substring(string.indexOf('"spa":')+6, string.indexOf(',"spd"')), evln, lnbr)
 		// SpD EV
 		if (string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')) == 0)
 		{
 			var sdev = ""
 		}
-		else var sdev = ln9p1.concat(string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')), lnbr)
+		else var sdev = ln9p1.concat(string.substring(string.indexOf('"spd":')+6, string.indexOf(',"spe"')), evln, lnbr)
 		// Spe EV
 		if (string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')) == 0)
 		{
 			var spev = ""
 		}
-		else var spev = ln10p1.concat(string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), lnbr)
+		else var spev = ln10p1.concat(string.substring(string.indexOf('"spe":')+6, string.indexOf('},"nature"')), evln, lnbr)
 		
 		var movesall = string.substring(string.indexOf('"moves":[[') + 11, string.lastIndexOf(']]'))
 		var move1 = string.substring(string.indexOf('"moves":[[') + 11, string.indexOf('"],['))
